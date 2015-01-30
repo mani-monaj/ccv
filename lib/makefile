@@ -18,10 +18,7 @@ ccv_io.o: ccv_io.c ccv.h ccv_internal.h io/*.c
 	$(CC) $< -o $@ -c $(CFLAGS)
 
 3rdparty/sqlite3/sqlite3.o: 3rdparty/sqlite3/sqlite3.c
-	$(CC) $< -o $@ -c -O3 -D SQLITE_THREADSAFE=0 -D SQLITE_OMIT_LOAD_EXTENSION
-
-../samples/image-net-2012-vgg-d.sqlite3:
-	../samples/download-vgg-d-model.sh
+		$(CC) $< -o $@ -c -O3 -D SQLITE_THREADSAFE=0 -D SQLITE_OMIT_LOAD_EXTENSION
 
 %.o: %.c ccv.h ccv_internal.h cuda/cwc.h cuda/cwc_helper.h
 	$(CC) $< -o $@ -c $(CFLAGS)
