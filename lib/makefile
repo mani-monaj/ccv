@@ -6,7 +6,7 @@ NVFLAGS := -O3 $(NVFLAGS)
 
 .PHONY: all clean
 
-all: libccv.a ../samples/image-net-2012-vgg-d.sqlite3
+all: libccv.a
 
 clean:
 	rm -f *.o 3rdparty/sha1/*.o 3rdparty/sfmt/*.o 3rdparty/kissfft/*.o 3rdparty/dsfmt/*.o 3rdparty/sqlite3/*.o cuda/*.o libccv.a
